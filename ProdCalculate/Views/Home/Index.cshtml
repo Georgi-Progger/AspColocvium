@@ -1,0 +1,21 @@
+﻿@model TaskModel
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <form asp-action="CalculateFactorial" asp-controller="Home">
+        <p>Введите число: <input name="n" /></p>
+        <input type="submit" value="Вычислить" />
+    </form>
+    
+    <form asp-action="DateCalculate" asp-controller="Home">
+        <label>Первое время </label>
+        <input type="time" step=1 name="date1" />
+
+        <label>Второе время </label>
+        <input type="time" step=1 name="date2" />
+        <input type="submit" value="Вычислить секунды" />
+    </form>
+</div>
